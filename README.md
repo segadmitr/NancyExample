@@ -1,1 +1,1 @@
-# NancyExample
+# Простой пример работы с Nancy
