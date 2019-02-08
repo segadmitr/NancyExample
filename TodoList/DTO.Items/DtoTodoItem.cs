@@ -2,5 +2,6 @@
 {
     public class DtoTodoItem
     {
+        public string Name { get; set; }
     }
 }

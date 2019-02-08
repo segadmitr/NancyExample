@@ -1,9 +1,12 @@
 ﻿using System;
 using Castle.MicroKernel.Lifestyle;
+using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using Nancy;
 using Nancy.Bootstrapper;
 using Nancy.Bootstrappers.Windsor;
+using ToDoApp.Logic.Implementation;
+using ToDoApp.Logic.Interfaces;
 
 namespace ToDoApp
 {
@@ -39,6 +42,17 @@ namespace ToDoApp
                 }
                 return null;
             };
+        }
+
+        protected override void ConfigureApplicationContainer(IWindsorContainer container)
+        {
+            base.ConfigureApplicationContainer(container);
+
+            container.Register(
+                Component.For<IToDoItemService>()
+                    .ImplementedBy<ToDoItemService>()
+                    .LifestyleSingleton()
+            );
         }
     }
 }
