@@ -1,6 +1,6 @@
 ﻿namespace ToDoApp.Logic.Interfaces
 {
-    public class ToDoItemService
+    public interface IToDoItemService
     {
     }
 }

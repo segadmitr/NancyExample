@@ -1,6 +1,6 @@
 ﻿using ToDoApp.Core.Interfaces;
 
-namespace ToDoApp.Logic.Implementation
+namespace ToDoApp.Infrastucture.Data
 {
     public class TodoItemRepository : ITodoItemRepository
     {
