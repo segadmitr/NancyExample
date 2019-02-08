@@ -7,7 +7,7 @@
     <ProjectGuid>{9C925CA2-C234-40B7-AAB0-EF78E7132CA8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Logic.Interfaces</RootNamespace>
+    <RootNamespace>ToDoApp.Logic.Interfaces</RootNamespace>
     <AssemblyName>Logic.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

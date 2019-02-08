@@ -7,7 +7,7 @@
     <ProjectGuid>{71CD3A4C-BDF6-4F2D-B3D5-8E06925E92C2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Infrastucture.Data</RootNamespace>
+    <RootNamespace>ToDoApp.Infrastucture.Data</RootNamespace>
     <AssemblyName>Infrastucture.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
