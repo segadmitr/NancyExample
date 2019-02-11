@@ -45,6 +45,7 @@
     <Compile Include="IMapper.cs" />
     <Compile Include="ITodoItemRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

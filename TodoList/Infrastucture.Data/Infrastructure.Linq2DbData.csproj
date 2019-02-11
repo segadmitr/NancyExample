@@ -7,7 +7,7 @@
     <ProjectGuid>{71CD3A4C-BDF6-4F2D-B3D5-8E06925E92C2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ToDoApp.Infrastucture.Linq2DbData</RootNamespace>
+    <RootNamespace>ToDoApp.Infrastructure.Linq2DbData</RootNamespace>
     <AssemblyName>Infrastucture.Linq2DbData</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -47,6 +47,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TodoItemRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
+    <Compile Include="UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core.Domain\Core.Domain.csproj">

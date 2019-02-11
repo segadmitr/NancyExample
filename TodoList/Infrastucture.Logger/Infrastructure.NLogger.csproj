@@ -7,7 +7,7 @@
     <ProjectGuid>{BD602412-F91A-48E4-A3A3-B397C1C18199}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Infrastucture.NLogger</RootNamespace>
+    <RootNamespace>Infrastructure.NLogger</RootNamespace>
     <AssemblyName>Infrastucture.NLogger</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Interfaces", "Core.Int
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO.Items", "DTO.Items\DTO.Items.csproj", "{95B2070C-EDF1-48EA-88F6-1B9DBBD9ABF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastucture.Linq2DbData", "Infrastucture.Data\Infrastucture.Linq2DbData.csproj", "{71CD3A4C-BDF6-4F2D-B3D5-8E06925E92C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Linq2DbData", "Infrastucture.Data\Infrastructure.Linq2DbData.csproj", "{71CD3A4C-BDF6-4F2D-B3D5-8E06925E92C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Interfaces", "Logic.Interfaces\Logic.Interfaces.csproj", "{9C925CA2-C234-40B7-AAB0-EF78E7132CA8}"
 EndProject
@@ -31,9 +31,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8BE2158A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Tests", "Logic.Tests\Logic.Tests.csproj", "{6970F1E4-7686-4A94-B23B-82BA0FC5535E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastucture.NLogger", "Infrastucture.Logger\Infrastucture.NLogger.csproj", "{BD602412-F91A-48E4-A3A3-B397C1C18199}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.NLogger", "Infrastucture.Logger\Infrastructure.NLogger.csproj", "{BD602412-F91A-48E4-A3A3-B397C1C18199}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastucture.AutoMapper", "Infrastucture.Mapper\Infrastucture.AutoMapper.csproj", "{DED4EBFF-7491-44D9-97DF-7A63D5249F29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.AutoMapper", "Infrastucture.Mapper\Infrastructure.AutoMapper.csproj", "{DED4EBFF-7491-44D9-97DF-7A63D5249F29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

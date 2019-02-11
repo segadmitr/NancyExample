@@ -7,7 +7,7 @@
     <ProjectGuid>{DED4EBFF-7491-44D9-97DF-7A63D5249F29}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ToDoApp.Infrastucture.AutoMapper</RootNamespace>
+    <RootNamespace>ToDoApp.Infrastructure.AutoMapper</RootNamespace>
     <AssemblyName>Infrastucture.AutoMapper</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

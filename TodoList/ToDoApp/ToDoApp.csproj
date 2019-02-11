@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="apiModules\AuthorizationModule.cs" />
     <Compile Include="apiModules\ToDoItemModule.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,9 +75,9 @@
       <Project>{95b2070c-edf1-48ea-88f6-1b9dbbd9abf0}</Project>
       <Name>DTO.Items</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Infrastucture.Data\Infrastucture.Linq2DbData.csproj">
+    <ProjectReference Include="..\Infrastucture.Data\Infrastructure.Linq2DbData.csproj">
       <Project>{71cd3a4c-bdf6-4f2d-b3d5-8e06925e92c2}</Project>
-      <Name>Infrastucture.Linq2DbData</Name>
+      <Name>Infrastructure.Linq2DbData</Name>
     </ProjectReference>
     <ProjectReference Include="..\Logic.Implementation\Logic.Implementation.csproj">
       <Project>{0767b16b-a025-4384-bb47-2055dac7003c}</Project>
