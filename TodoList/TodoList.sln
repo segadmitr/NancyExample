@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.NLogger", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.AutoMapper", "Infrastucture.Mapper\Infrastructure.AutoMapper.csproj", "{DED4EBFF-7491-44D9-97DF-7A63D5249F29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.EntityFramework", "Infrastructure.EntityFramework\Infrastructure.EntityFramework.csproj", "{34268F38-7060-4CCA-8EFF-42561533B5E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{DED4EBFF-7491-44D9-97DF-7A63D5249F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DED4EBFF-7491-44D9-97DF-7A63D5249F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DED4EBFF-7491-44D9-97DF-7A63D5249F29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34268F38-7060-4CCA-8EFF-42561533B5E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34268F38-7060-4CCA-8EFF-42561533B5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34268F38-7060-4CCA-8EFF-42561533B5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34268F38-7060-4CCA-8EFF-42561533B5E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +105,7 @@ Global
 		{6970F1E4-7686-4A94-B23B-82BA0FC5535E} = {8BE2158A-6FFC-40EE-AA16-652943E99B1F}
 		{BD602412-F91A-48E4-A3A3-B397C1C18199} = {CAAC1870-D4A7-4E1C-AFA0-CA8566FB7948}
 		{DED4EBFF-7491-44D9-97DF-7A63D5249F29} = {CAAC1870-D4A7-4E1C-AFA0-CA8566FB7948}
+		{34268F38-7060-4CCA-8EFF-42561533B5E5} = {CAAC1870-D4A7-4E1C-AFA0-CA8566FB7948}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E68C0C0B-0571-4AE2-9AEE-92CB9082ECFF}

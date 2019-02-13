@@ -48,6 +48,7 @@
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -74,6 +75,10 @@
     <ProjectReference Include="..\DTO.Items\DTO.Items.csproj">
       <Project>{95b2070c-edf1-48ea-88f6-1b9dbbd9abf0}</Project>
       <Name>DTO.Items</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.EntityFramework\Infrastructure.EntityFramework.csproj">
+      <Project>{34268f38-7060-4cca-8eff-42561533b5e5}</Project>
+      <Name>Infrastructure.EntityFramework</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infrastucture.Data\Infrastructure.Linq2DbData.csproj">
       <Project>{71cd3a4c-bdf6-4f2d-b3d5-8e06925e92c2}</Project>

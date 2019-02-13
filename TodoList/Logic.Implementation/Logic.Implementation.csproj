@@ -46,6 +46,10 @@
     <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Core.Domain\Core.Domain.csproj">
+      <Project>{8c70c415-2a4b-4226-a0e4-cdba4dcabeb3}</Project>
+      <Name>Core.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Core.Interfaces\Core.Interfaces.csproj">
       <Project>{749dfa49-41a8-4761-a760-680420e12d3f}</Project>
       <Name>Core.Interfaces</Name>

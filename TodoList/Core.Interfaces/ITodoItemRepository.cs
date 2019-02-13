@@ -1,6 +1,8 @@
-﻿namespace ToDoApp.Core.Interfaces
+﻿using ToDoApp.Core.Domain;
+
+namespace ToDoApp.Core.Interfaces
 {
-    public interface ITodoItemRepository
+    public interface ITodoItemRepository:IBaseRepository<TodoItem>
     {
     }
 }

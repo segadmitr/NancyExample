@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Configuration;
 using Castle.MicroKernel.Lifestyle;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using Nancy;
 using Nancy.Bootstrapper;
 using Nancy.Bootstrappers.Windsor;
+using ToDoApp.Core.Interfaces;
+using ToDoApp.Infrastructure.EntityFramework;
 using ToDoApp.Logic.Implementation;
 using ToDoApp.Logic.Interfaces;
 
@@ -47,11 +50,17 @@ namespace ToDoApp
         protected override void ConfigureApplicationContainer(IWindsorContainer container)
         {
             base.ConfigureApplicationContainer(container);
+            container.Register(
+                Component.For<IUnitOfWork>()
+                    .ImplementedBy<UnitOfWork>()
+                    .DependsOn(Dependency.OnValue<string>(ConfigurationManager.ConnectionStrings["TodoBd"].ConnectionString))
+                    .LifestyleTransient()
+            );
 
             container.Register(
                 Component.For<IToDoItemService>()
                     .ImplementedBy<ToDoItemService>()
-                    .LifestyleSingleton()
+                    .LifestyleTransient()
             );
         }
     }
