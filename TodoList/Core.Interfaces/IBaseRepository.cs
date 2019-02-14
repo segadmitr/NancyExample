@@ -2,6 +2,14 @@
 
 namespace ToDoApp.Core.Interfaces
 {
+    /// <summary>
+    /// Базовый интерфейс репозитори
+    /// </summary>
+    /// <remarks>
+    /// Изменения сохраняются автоматически
+    /// после выполения команды
+    /// </remarks>
+    /// <typeparam name="T"></typeparam>
     public interface IBaseRepository<T> 
     {
         IEnumerable<T> GetAll();

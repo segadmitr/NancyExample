@@ -28,11 +28,6 @@ namespace ToDoApp.Infrastructure.EntityFramework
             get { return _userRepository.Value; }
         }
 
-        public void Save()
-        {
-            _context.SaveChanges();
-        }
-
         public virtual void Dispose(bool disposing)
         {
             if (!_disposed)

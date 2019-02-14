@@ -1,6 +1,11 @@
-﻿namespace ToDoApp.Core.Interfaces
+﻿using System;
+
+namespace ToDoApp.Core.Interfaces
 {
-    public interface IUnitOfWork
+    /// <summary>
+    /// Агрегация всех репозитриев
+    /// </summary>
+    public interface IUnitOfWork:IDisposable
     {
         ITodoItemRepository TodoItemRepository { get; }
         IUserRepository UserRepository { get; }
