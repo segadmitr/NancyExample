@@ -12,7 +12,6 @@ namespace ToDoApp.Infrastructure.Linq2DbData
         public TodoItemRepository(DataConnection dataConnection)
         {
             _dataConnection = dataConnection;
-            throw new System.NotImplementedException();
         }
 
         public IEnumerable<TodoItem> GetAll()

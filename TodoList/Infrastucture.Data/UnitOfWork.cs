@@ -1,5 +1,6 @@
 ﻿using System;
 using LinqToDB.Data;
+using LinqToDB.DataProvider.SqlServer;
 using ToDoApp.Core.Interfaces;
 
 namespace ToDoApp.Infrastructure.Linq2DbData
@@ -8,12 +9,15 @@ namespace ToDoApp.Infrastructure.Linq2DbData
     {
         private readonly Lazy<ITodoItemRepository> _todoItemRepository;
         private readonly Lazy<IUserRepository> _userRepository;
+        private DataConnection _connection;
+        private bool _disposed;
 
         public UnitOfWork(string connectionString)
         {
-            var dataConnection = new DataConnection();
-            _todoItemRepository = new Lazy<ITodoItemRepository>(() => new TodoItemRepository(dataConnection));
-            _userRepository = new Lazy<IUserRepository>(() => new UserRepository(dataConnection));
+            _connection = SqlServerTools.CreateDataConnection(connectionString, SqlServerVersion.v2012);
+
+            _todoItemRepository = new Lazy<ITodoItemRepository>(() => new TodoItemRepository(_connection));
+            _userRepository = new Lazy<IUserRepository>(() => new UserRepository(_connection));
         }
 
         public ITodoItemRepository TodoItemRepository
@@ -26,9 +30,22 @@ namespace ToDoApp.Infrastructure.Linq2DbData
             get { return _userRepository.Value; }
         }
 
+        public virtual void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                if (disposing)
+                {
+                    _connection.Dispose();
+                }
+                _disposed = true;
+            }
+        }
+
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }
