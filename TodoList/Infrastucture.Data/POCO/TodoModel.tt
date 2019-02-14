@@ -1,0 +1,16 @@
+<#@ template language="C#" debug="True" hostSpecific="True"                           #>
+<#@ output extension=".generated.cs"                                                  #>
+<#@ include file="$(LinqToDBT4SqlServerTemplatesDirectory)LinqToDB.SqlServer.Tools.ttinclude" #>
+<#@ include file="$(LinqToDBT4SqlServerTemplatesDirectory)PluralizationService.ttinclude"     #>
+<# //@ include file="$(ProjectDir)LinqToDB.Templates\LinqToDB.SqlServer.Tools.ttinclude" #>
+<# //@ include file="$(ProjectDir)LinqToDB.Templates\PluralizationService.ttinclude"     #>
+<#
+
+	NamespaceName = "POCO";
+	DataContextName = "ToDoBd";
+
+    var databasePath = Host.ResolveAssemblyReference("$(SolutionDir)") + @"ASP.NETHost\App_Data\todo.mdf";
+	LoadSqlServerMetadata(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='"+databasePath+"';Integrated Security=True");
+
+	GenerateModel();
+#>
