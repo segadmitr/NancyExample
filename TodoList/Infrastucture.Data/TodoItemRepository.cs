@@ -32,7 +32,7 @@ namespace ToDoApp.Infrastructure.Linq2DbData
 
         public void Create(Domain.TodoItem item)
         {
-            var todoItem = Mapper.Map<Domain.TodoItem, Domain.TodoItem>(item);
+            var todoItem = Mapper.Map<Domain.TodoItem, Poco.TodoItem>(item);
             _connection.InsertWithIdentity(todoItem);
         }
 
