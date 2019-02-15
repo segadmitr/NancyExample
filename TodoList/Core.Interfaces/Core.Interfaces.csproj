@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="IBaseRepository.cs" />
     <Compile Include="ILogger.cs" />
-    <Compile Include="IMapper.cs" />
     <Compile Include="ITodoItemRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="IUserRepository.cs" />
