@@ -1,8 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using LinqToDB;
 using LinqToDB.Data;
-using ToDoApp.Core.Domain;
 using ToDoApp.Core.Interfaces;
+using Domain = ToDoApp.Core.Domain;
+using Poco = ToDoApp.Infrastructure.Linq2DbData.POCO;
 
 namespace ToDoApp.Infrastructure.Linq2DbData
 {
@@ -15,41 +19,32 @@ namespace ToDoApp.Infrastructure.Linq2DbData
             _connection = dataConnection;
         }
 
-        public IEnumerable<User> GetAll()
+        public IEnumerable<Domain.User> GetAll()
         {
-            return _connection.GetTable<POCO.User>()
-                .Select(s => new User() {Id = s.Id, Password = s.Password, Login = s.Login});
+            return _connection.GetTable<Poco.User>().ProjectTo<Domain.User>();
         }
 
-        public User Get(int id)
+        public Domain.User Get(int id)
         {
-            var user = _connection.GetTable<POCO.User>().FirstOrDefault(s => s.Id == id);
-            if (user == null)
-            {
-                return null;
-            }
-
-            return new User()
-            {
-                Id = user.Id,
-                Login = user.Login,
-                Password = user.Password
-            };
+            var user = _connection.GetTable<Poco.User>().FirstOrDefault(s => s.Id == id);
+            return user == null ? null : Mapper.Map<Poco.User, Domain.User>(user);
         }
 
-        public void Create(User item)
+        public void Create(Domain.User item)
         {
-            throw new System.NotImplementedException();
+            var user = Mapper.Map<Domain.User, Poco.User>(item);
+            _connection.InsertWithIdentity(user);
         }
 
-        public void Update(User item)
+        public void Update(Domain.User item)
         {
-            throw new System.NotImplementedException();
+            var user = Mapper.Map<Domain.User, Poco.User>(item);
+            _connection.Update(user);
         }
 
         public void Delete(int id)
         {
-            throw new System.NotImplementedException();
+            _connection.GetTable<Poco.User>().Delete(x=>x.Id ==id);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using AutoMapper;
 using Castle.MicroKernel.Lifestyle;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
@@ -8,6 +9,7 @@ using Nancy.Bootstrapper;
 using Nancy.Bootstrappers.Windsor;
 using ToDoApp.Core.Interfaces;
 using ToDoApp.Infrastructure.EntityFramework;
+using ToDoApp.Infrastructure.Linq2DbData.MapConfigs;
 using ToDoApp.Logic.Implementation;
 using ToDoApp.Logic.Interfaces;
 
@@ -15,6 +17,17 @@ namespace ToDoApp
 {
     public class Bootstrapper : WindsorNancyBootstrapper
     {
+        protected override void ApplicationStartup(IWindsorContainer container, IPipelines pipelines)
+        {
+            Mapper.Initialize(cfg =>
+            {
+                //Профиль для linq2db(убрать если не нужно)
+                cfg.AddProfile<Linq2DbMapProfile>();
+            });
+
+            base.ApplicationStartup(container, pipelines);
+        }
+
         protected override void RequestStartup(IWindsorContainer container, IPipelines pipelines, NancyContext context)
         {
             base.RequestStartup(container, pipelines, context);

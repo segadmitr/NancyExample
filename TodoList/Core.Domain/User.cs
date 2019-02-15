@@ -7,6 +7,5 @@ namespace ToDoApp.Core.Domain
         public int Id { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
-        public ICollection<TodoItem> TodoItems { get; set; }
     }
 }

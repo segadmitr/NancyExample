@@ -18,7 +18,7 @@ using LinqToDB.DataProvider.SqlServer;
 using LinqToDB.Extensions;
 using LinqToDB.Mapping;
 
-namespace POCO
+namespace ToDoApp.Infrastructure.Linq2DbData.POCO
 {
 	/// <summary>
 	/// Database       : TODO_acceb7bc48244e71acd6588a63d324d6

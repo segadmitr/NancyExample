@@ -6,7 +6,7 @@
 <# //@ include file="$(ProjectDir)LinqToDB.Templates\PluralizationService.ttinclude"     #>
 <#
 
-	NamespaceName = "POCO";
+	NamespaceName = "ToDoApp.Infrastructure.Linq2DbData.POCO";
 	DataContextName = "ToDoBd";
 
     var databasePath = Host.ResolveAssemblyReference("$(SolutionDir)") + @"ASP.NETHost\App_Data\todo.mdf";
