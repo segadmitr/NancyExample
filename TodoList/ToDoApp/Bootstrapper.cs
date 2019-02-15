@@ -9,9 +9,8 @@ using Nancy.Bootstrapper;
 using Nancy.Bootstrappers.Windsor;
 using ToDoApp.Core.Interfaces;
 using ToDoApp.Infrastructure.Linq2DbData;
-//Раскоментить/закоментить если нужна/ненужна
-//технология доступа у данным EntityFramework
-//using ToDoApp.Infrastructure.EntityFramework;
+/*Раскоментить/закоментить если нужно работать через EntityFramework
+using ToDoApp.Infrastructure.EntityFramework;*/
 using ToDoApp.Infrastructure.Linq2DbData.MapConfigs;
 using ToDoApp.Logic.Implementation;
 using ToDoApp.Logic.Interfaces;

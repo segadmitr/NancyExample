@@ -19,6 +19,8 @@ namespace ToDoApp.Infrastructure.Linq2DbData
             _connection = dataConnection;
         }
 
+        #region IBaseRepository
+
         public IEnumerable<Domain.User> GetAll()
         {
             return _connection.GetTable<Poco.User>().ProjectTo<Domain.User>();
@@ -44,7 +46,15 @@ namespace ToDoApp.Infrastructure.Linq2DbData
 
         public void Delete(int id)
         {
-            _connection.GetTable<Poco.User>().Delete(x=>x.Id ==id);
+            _connection.GetTable<Poco.User>().Delete(x => x.Id == id);
         }
+
+        #endregion
+
+        #region IUserRepository
+
+        
+
+        #endregion
     }
 }

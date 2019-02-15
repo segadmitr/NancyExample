@@ -19,6 +19,8 @@ namespace ToDoApp.Infrastructure.Linq2DbData
             _connection = connection;
         }
 
+        #region IBaseRepository
+
         public IEnumerable<Domain.TodoItem> GetAll()
         {
             return _connection.GetTable<Poco.TodoItem>().ProjectTo<Domain.TodoItem>();
@@ -46,5 +48,14 @@ namespace ToDoApp.Infrastructure.Linq2DbData
         {
             _connection.GetTable<Poco.User>().Delete(x => x.Id == id);
         }
+
+        #endregion
+
+        #region ITodoItemRepository
+
+
+
+        #endregion
+
     }
 }
